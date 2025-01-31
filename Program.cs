@@ -11,8 +11,10 @@ using System.Security.Claims;
 var builder = WebApplication.CreateBuilder(args);
 
 // **Steg 1**:
-// spara URI för ditt Azure Key Vault i en variabel 
-var keyVaultUri = new Uri("https://projekt-key-vault.vault.azure.net/");
+// Uri:n som leder till key vaultet är sparad i en environment variabel 
+var keyVaultUri = Environment.GetEnvironmentVariable("KeyVaultName");
+var AppService = new Uri(keyVaultUri);
+
 
 // **Steg 2**:
 // lägg till Azure Key Vault i konfigurationen. 
@@ -21,7 +23,7 @@ var keyVaultUri = new Uri("https://projekt-key-vault.vault.azure.net/");
 // DefaultAzureCredential() hanterar autentiseringen och ser till att applikationen autentiserar sig mot key vault i azure. 
 // I den här appen använder vi Managed Identity för autentisering, vilket innebär att när appen körs på Azure (t.ex.
 // i Azure App Service), får den automatiskt en identitet som kan användas för att autentisera sig mot andra Azure-tjänster, som Azure Key Vault.
-builder.Configuration.AddAzureKeyVault(keyVaultUri, new DefaultAzureCredential());
+builder.Configuration.AddAzureKeyVault(AppService, new DefaultAzureCredential());
 
 /* (Om din app inte är på Azure, kan du fortfarande få åtkomst till Azure Key Vault genom att använda en App Registration och autentisera
  * den via en client secret)! */

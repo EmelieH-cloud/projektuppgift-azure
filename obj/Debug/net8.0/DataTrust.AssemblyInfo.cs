@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DataTrust")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43c0dd0b60c9fbc6a8915416e9fb55f49858a2ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cef10940f29eb7be194e56de9dfab67e25c6bd36")]
 [assembly: System.Reflection.AssemblyProductAttribute("DataTrust")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DataTrust")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
