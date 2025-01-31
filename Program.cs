@@ -28,7 +28,7 @@ builder.Configuration.AddAzureKeyVault(keyVaultUri, new DefaultAzureCredential()
 
 // **Steg 3**: Hämta secret (i detta fall anslutningssträngen) från Key Vault
 // DefaultConnection är namnet på vår secret 
-string connectionString = builder.Configuration["DefaultConnection2"];
+string connectionString = builder.Configuration["SecretConnection"];
 
 // **Steg 4**: Skapa en databaskoppling med strängen 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
