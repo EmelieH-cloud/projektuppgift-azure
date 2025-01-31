@@ -1,6 +1,5 @@
 ﻿using DataTrust.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 
 namespace DataTrust.Data
 {
@@ -14,3 +13,5 @@ namespace DataTrust.Data
         }
     }
 }
+
+// test
